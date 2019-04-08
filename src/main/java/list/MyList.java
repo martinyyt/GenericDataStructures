@@ -14,6 +14,14 @@ public class MyList<T> {
     private int count;
 
     /**
+     * Constructs an empty list.
+     */
+    public MyList() {
+        this.elements = new Object[INITIAL_CAPACITY];
+        count = 0;
+    }
+
+    /**
      * Checks if the given index is within the length of the list.
      *
      * @param index the index to check
@@ -23,14 +31,6 @@ public class MyList<T> {
         if (index < 0 || index >= this.count) {
             throw new IndexOutOfBoundsException();
         }
-    }
-
-    /**
-     * Constructs an empty list.
-     */
-    public MyList() {
-        this.elements = new Object[INITIAL_CAPACITY];
-        count = 0;
     }
 
     /**
